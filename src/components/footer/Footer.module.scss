@@ -1,0 +1,72 @@
+footer{
+    margin-top: 5em;
+    width: 100%;
+    height: fit-content;
+    padding: 2em;
+    background-color: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: column;
+    .sociaMediaIcon{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        @media screen and (min-width: 1024px){
+            width: 90%;
+        }
+        .logo{
+            width: 150px;
+            height: 41px;
+            position: relative;
+            background-image: url("../../assets/images/logo\ sm.png");
+            background-position: center center;
+            background-size: 80% 100%;
+            background-repeat: no-repeat;
+            a{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            a{
+                text-align: none;
+                color: #fff;
+                font-size: 1.8em;
+                transition: all .1s ease-in-out;
+            }
+            a:hover{
+                transform: scale(125%);
+            }
+        }
+    }
+    .infoCont{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (min-width: 1024px){
+            width: 90%;
+        }
+        p{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1em;
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

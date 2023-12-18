@@ -1,0 +1,33 @@
+:root{
+    --bg-color: #000;
+    --btn-primary: #fb2512;
+    --btn-secondary: #191919;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+font-family: "Mont";
+    src: url("./assets/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Mont Semibold";
+    src: url("./assets/fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Mont bold";
+    src: url("./assets/fonts/Montserrat-Bold.ttf");
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: "Mont";
+    color: #fff;
+    scroll-behavior: smooth;
+}

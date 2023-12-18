@@ -1,0 +1,95 @@
+.cont{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    @media screen and (min-width: 600px) {
+        margin: 0;
+        height: 50vh;
+    }
+    .subCont{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4em;
+        width: 90%;
+        .row{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5em;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            p{
+                color: #cccccc71;
+                text-align: justify;
+            }
+            h2{
+                position: relative;
+            }
+            h2::after{
+                content: "";
+                width: 50%;
+                height: 2px;
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: var(--btn-primary);
+            }
+        }
+        .cardsCont{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.5em;
+            @media screen and (min-width: 600px) {
+                flex-direction: row;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+            .card{
+                width: 250px;
+                height: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                gap: 1em;
+                --b: 2px;   /* thickness of the border */
+                --c: var(--btn-primary);   /* color of the border */
+                --w: 100%;  /* width of border */
+                .icons{
+                    font-size: 3.2em;
+                    color: var(--btn-primary);
+                }
+                h4, p{
+                    text-align: center;
+                }
+                p{
+                    color: #cccccc71;
+                }
+                @media screen and (min-width: 1024px) {
+                    --w: 25%;  /* width of border */
+                }
+            }
+            .card::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: var(--c, red);
+                --_g: #ff0b0b00 90deg, #ff0000 0;
+                --_p: var(--w) var(--w) no-repeat;
+                --mask:
+                    conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
+                    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+                -webkit-mask: var(--mask);
+                mask: var(--mask);
+            }               
+        }
+    }
+}
